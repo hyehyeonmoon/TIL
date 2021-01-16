@@ -18,10 +18,9 @@
 
 1. If w_h is small, then this term gets vanishingly small as i and j get further apar
 
-<div>
+
 ![Untitled 1](https://user-images.githubusercontent.com/55529617/104814241-33d31980-5851-11eb-9b90-2443c9477806.png)
-![Untitled 2](https://user-images.githubusercontent.com/55529617/104814242-35044680-5851-11eb-810a-b904c36c66dd.png)
-</div>
+
 
 2. If the largest eigenvalue of w_h is less than 1, then the gradient(left) will shrink exponentially, 
 
@@ -39,15 +38,15 @@ if the norm of the gradient is graeter than some threshold, scale ift down befor
 
 ### Solution for Vanishing gradient in RNN : LSTM
 
-![Untitled 3](https://user-images.githubusercontent.com/55529617/104814244-359cdd00-5851-11eb-9dbc-c393c2493634.png)
+![Untitled 2](https://user-images.githubusercontent.com/55529617/104814242-35044680-5851-11eb-810a-b904c36c66dd.png)
 
-![Untitled 4](https://user-images.githubusercontent.com/55529617/104814245-359cdd00-5851-11eb-84cc-715a1da822e7.png)
+![Untitled 3](https://user-images.githubusercontent.com/55529617/104814244-359cdd00-5851-11eb-9dbc-c393c2493634.png)
 
 ⇒ The LSTM architecture makes it easier for the RNN to preserve information over many timesteps
 
 ### LSTM의 간소화 : GRU
 
-![Untitled 5](https://user-images.githubusercontent.com/55529617/104814246-36357380-5851-11eb-92ba-6d84593a568a.png)
+![Untitled 4](https://user-images.githubusercontent.com/55529617/104814245-359cdd00-5851-11eb-84cc-715a1da822e7.png)
 
 ⇒  **Rule of thumb: start with LSTM, but switch to GRU if you want something more efficient**
 
@@ -66,7 +65,7 @@ add more direct connections (thus allowing the gradient to flow)
 
 - Architecture
 
-![Lecture%207-Vanishing%20Gradients%20and%20Fancy%20Rnns%20bcc999345626452aa3e255c871a3a62b/Untitled%205.png](Lecture%207-Vanishing%20Gradients%20and%20Fancy%20Rnns%20bcc999345626452aa3e255c871a3a62b/Untitled%205.png)
+![Untitled 5](https://user-images.githubusercontent.com/55529617/104814246-36357380-5851-11eb-92ba-6d84593a568a.png)
 
 - Effect
 
