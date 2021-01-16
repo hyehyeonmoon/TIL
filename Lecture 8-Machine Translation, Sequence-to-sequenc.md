@@ -1,8 +1,4 @@
-# Lecture 8-Machine Translation, Sequence-to-sequence and Attention
-
-Lecture: Lecture 8
-
-## [Machine Translation, Sequence-to-sequence and Attention]
+## Lecture8 - [Machine Translation, Sequence-to-sequence and Attention]
 
 ## 4.1 Pre-Neural Machine Translation
 
@@ -22,9 +18,10 @@ Machine Translation : the task of translating a sentence x from one language(the
 
 과정 : 베이즈룰(Bayes rule)을 사용해서 두 요소 Translation Model, Language Model 로 분해한 뒤, 두 요소 각각을 학습해서 결과를 도출함
 
-![Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled.png](Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled.png)
-
-![Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%201.png](Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%201.png)
+<div>
+<img src="https://user-images.githubusercontent.com/55529617/104814355-c1af0480-5851-11eb-8eb6-cd7ddc44059c.png">
+<img src="https://user-images.githubusercontent.com/55529617/104814336-bc51ba00-5851-11eb-9578-a2e60db45cf0.png">
+</div>
 
 Translation Model, P(x|y) : 작은 단어 또는 구의 지엽적인 번역을 하는 역할, Parallel data(같은 내용 다른 언어 사전)로부터 학습
 
@@ -46,7 +43,7 @@ Language Model, P(y) : 영어를 더 유창하게 쓸 수 있도록 하는 역�
 - require compiling and maintaining extra resources,
 - lots of human effort
 
-![Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%202.png](Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/55529617/104814337-bcea5080-5851-11eb-926c-fd60a6c25113.png)
 
 ### #4.2.2 Alignment
 
@@ -75,15 +72,15 @@ Machine Translation에 Neural network 모델의 Sequence to sequne(two rnns) 구
 
 디코더, 인코더 부분으로 나뉘며 디코더의 output이 encoder의 hidden state로 들어가게 됨
 
-![Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%203.png](Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/55529617/104814338-bd82e700-5851-11eb-8e84-08e1d3cf93c5.png)
 
-![Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%204.png](Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/55529617/104814339-be1b7d80-5851-11eb-8122-7838624540ef.png)
 
 ### #4.3.2 학습과정(forward+backward)
 
 Backpropagation 할 때, 시스템 전체의 모수가 동일하 기준으로 업데이트 됨.
 
-![Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%205.png](Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%205.png)
+![Untitled 5](https://user-images.githubusercontent.com/55529617/104814340-be1b7d80-5851-11eb-9996-bde1d329b053.png)
 
 ### #4.3.3 Beam search Algorithm
 
@@ -93,7 +90,7 @@ Backpropagation 할 때, 시스템 전체의 모수가 동일하 기준으로 �
 
 따라서 NMT에서 Greedy decoding을 사용했을 때, 문제가 발생함
 
-![Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%206.png](Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%206.png)
+![Untitled 6](https://user-images.githubusercontent.com/55529617/104814341-beb41400-5851-11eb-9141-a42bb7be64fd.png)
 
 ② Exhaustive Search decoding(완전탐색 알고리즘)
 
@@ -103,7 +100,7 @@ Backpropagation 할 때, 시스템 전체의 모수가 동일하 기준으로 �
 
 Beam search Decoding : On each step of decoder, keep track of the k(beam size) most probable partial translations(which we call hypotheses)
 
-![Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%207.png](Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%207.png)
+![Untitled 7](https://user-images.githubusercontent.com/55529617/104814342-beb41400-5851-11eb-9776-aa269412ac1e.png)
 
 확률이어서 점수는 모두 음수이지만, 더 높은 점수일수록 더 좋은 문장
 
@@ -117,15 +114,15 @@ Beam search Decoding : On each step of decoder, keep track of the k(beam size) m
 
 - >길이로 정규화를 시켜줌
 
-![Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%208.png](Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%208.png)
+![Untitled 8](https://user-images.githubusercontent.com/55529617/104814343-bf4caa80-5851-11eb-980c-2b7f1bd2f197.png)
 
 ### #4.3.4 NMT의 장점 및 단점
 
-![Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%209.png](Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%209.png)
+![Untitled 9](https://user-images.githubusercontent.com/55529617/104814344-bf4caa80-5851-11eb-82db-ef62f982276d.png)
 
-![Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%2010.png](Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%2010.png)
+![Untitled 10](https://user-images.githubusercontent.com/55529617/104814346-bfe54100-5851-11eb-9da4-bc3be4489ce3.png)
 
-![Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%2011.png](Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%2011.png)
+![Untitled 11](https://user-images.githubusercontent.com/55529617/104814347-bfe54100-5851-11eb-804b-a496f6a31a4e.png)
 
 - using common sense is still hard
 - Uninterpretable systems do strange things
@@ -151,13 +148,13 @@ Bottleneck problem : single vector 안에 모든 정보가 담겨야 하는 과�
 
 아이디어 : on each step of the decoder, use direct connection to the encoder to focus on a particular part of the source sequence.
 
-![Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%2012.png](Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%2012.png)
+![Untitled 12](https://user-images.githubusercontent.com/55529617/104814348-c07dd780-5851-11eb-9f8b-269bbb1b94ac.png)
 
-![Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%2013.png](Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%2013.png)
+![Untitled 13](https://user-images.githubusercontent.com/55529617/104814349-c07dd780-5851-11eb-9dc6-78972efa0e0c.png)
 
 ## #5.3 Attention의 장점
 
-![Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%2014.png](Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%2014.png)
+![Untitled 14](https://user-images.githubusercontent.com/55529617/104814350-c1166e00-5851-11eb-8bc4-a59d409b688e.png)
 
 ## #5.4 Attention의 일반화
 
@@ -175,4 +172,4 @@ Given a set of vector values, and a vector query, attention is a technique to co
 
 Attention score을 다양한 방식으로 구할 수 있음
 
-![Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%2015.png](Lecture%208-Machine%20Translation,%20Sequence-to-sequenc%20aae237f2ebff458ca76574f3c5339bb6/Untitled%2015.png)
+![Untitled 15](https://user-images.githubusercontent.com/55529617/104814353-c1166e00-5851-11eb-92df-d4020997e5fe.png)
