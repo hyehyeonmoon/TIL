@@ -10,3 +10,4 @@ Today I Learned(하루 1커밋 목표)
 |2021-01-13| PyTorch introduction 인공신경망 구현|
 |2021-01-14|밑바닥부터 시작하는 딥러닝 Ch06 training techniques|
 |2021-01-16|cs224N: lecture7, lecture8 정리|
+|2021-01-17|cs224N: lecture10, lecture11 정리|
