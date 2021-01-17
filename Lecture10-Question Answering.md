@@ -1,7 +1,3 @@
-# Lecture10-Question Answering
-
-Lecture: lecture 10
-
 ## [(Textual)Question Answering]
 
 ## Motivation/History
@@ -50,11 +46,11 @@ Both metrics ignore punctuation and articles(a, an, the only)
 
 ### Stanford Attentive Reader model
 
-![Lecture10-Question%20Answering%20ef25ee99ce75485785b0823df90785a5/Untitled.png](Lecture10-Question%20Answering%20ef25ee99ce75485785b0823df90785a5/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/55529617/104840188-24170c00-5909-11eb-883d-f1910c35d0ae.png)
 
-![Lecture10-Question%20Answering%20ef25ee99ce75485785b0823df90785a5/Untitled%201.png](Lecture10-Question%20Answering%20ef25ee99ce75485785b0823df90785a5/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/55529617/104840185-224d4880-5909-11eb-8cf1-3394cbdb25ed.png)
 
-![Lecture10-Question%20Answering%20ef25ee99ce75485785b0823df90785a5/Untitled%202.png](Lecture10-Question%20Answering%20ef25ee99ce75485785b0823df90785a5/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/55529617/104840186-24170c00-5909-11eb-9eca-3a461ae450bd.png)
 
 ### Stanford Attentive Reader++(DrQA)
 
