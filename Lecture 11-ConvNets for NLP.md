@@ -1,7 +1,3 @@
-# Lecture 11-ConvNets for NLP
-
-Lecture: lecture 11
-
 ## [ConvNets for NLP]
 
 ## From RNNs to CNN
@@ -34,7 +30,7 @@ RNN보다 빠르며 bottleneck problem을 해결
 
 ### 1D convolution for text
 
-![Lecture%2011-ConvNets%20for%20NLP%20673877b13d324200ab1002d4f7623b08/Untitled.png](Lecture%2011-ConvNets%20for%20NLP%20673877b13d324200ab1002d4f7623b08/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/55529617/104840228-63455d00-5909-11eb-8c0c-0cfc565838fa.png)
 
 - 더 넓은 범위를 한번에 보고 싶다면
 1. 더 큰 filter를 사용
@@ -43,7 +39,7 @@ RNN보다 빠르며 bottleneck problem을 해결
 
 ### Other notion
 
-![Lecture%2011-ConvNets%20for%20NLP%20673877b13d324200ab1002d4f7623b08/Untitled%201.png](Lecture%2011-ConvNets%20for%20NLP%20673877b13d324200ab1002d4f7623b08/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/55529617/104840220-5fb1d600-5909-11eb-849b-5c69df1fa783.png)
 
 ### 용어
 
@@ -61,7 +57,7 @@ multiple filters(100) with various widths(various n-grams)
 
 Multi-channel input idea(word vector와 word vector 복사본을 만들어 그 중 하나는 고정, 다른 하나는 fine-tuned)
 
-![Lecture%2011-ConvNets%20for%20NLP%20673877b13d324200ab1002d4f7623b08/Untitled%202.png](Lecture%2011-ConvNets%20for%20NLP%20673877b13d324200ab1002d4f7623b08/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/55529617/104840222-60e30300-5909-11eb-91d3-d5f47915d15a.png)
 
 ## Toolkit & ideas for NLP task
 
@@ -113,7 +109,7 @@ internal covariate shift 문제를 해결하기 위해 배치 단위로 정규�
 
 ### Ideas
 
-![Lecture%2011-ConvNets%20for%20NLP%20673877b13d324200ab1002d4f7623b08/Untitled%203.png](Lecture%2011-ConvNets%20for%20NLP%20673877b13d324200ab1002d4f7623b08/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/55529617/104840223-617b9980-5909-11eb-88cb-5cc0ba8e88a5.png)
 
 ## Deep CNN for sentence classification
 
@@ -125,9 +121,9 @@ but all the models are basically not very deep
 - Result is constant size, since text is truncated or padded
 - Local max pooling
 
-![Lecture%2011-ConvNets%20for%20NLP%20673877b13d324200ab1002d4f7623b08/Untitled%204.png](Lecture%2011-ConvNets%20for%20NLP%20673877b13d324200ab1002d4f7623b08/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/55529617/104840224-617b9980-5909-11eb-92bc-11425164236a.png)
 
-![Lecture%2011-ConvNets%20for%20NLP%20673877b13d324200ab1002d4f7623b08/Untitled%205.png](Lecture%2011-ConvNets%20for%20NLP%20673877b13d324200ab1002d4f7623b08/Untitled%205.png)
+![Untitled 5](https://user-images.githubusercontent.com/55529617/104840225-62143000-5909-11eb-9466-51eba02c32a3.png)
 
 ### Result
 
@@ -137,4 +133,4 @@ but all the models are basically not very deep
 
 ## Quasi-recurrent Neural Networks
 
-![Lecture%2011-ConvNets%20for%20NLP%20673877b13d324200ab1002d4f7623b08/Untitled%206.png](Lecture%2011-ConvNets%20for%20NLP%20673877b13d324200ab1002d4f7623b08/Untitled%206.png)
+![Untitled 6](https://user-images.githubusercontent.com/55529617/104840227-62acc680-5909-11eb-8033-54ba0c59bc27.png)
