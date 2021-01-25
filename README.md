@@ -13,3 +13,4 @@ Today I Learned(하루 1커밋 목표)
 |2021-01-17|cs224N: lecture10, lecture11 정리|
 |2021-01-18~21| Fastcampus와 밑바닥부터 시작하는 딥러닝|
 |2021-01-23| cs224N: lecture12 발표|
+|2021-01-25 | cs224N: lecture 11 복습|
